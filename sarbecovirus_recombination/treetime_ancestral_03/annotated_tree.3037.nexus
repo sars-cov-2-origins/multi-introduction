@@ -1,0 +1,133 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=31;
+	taxlabels
+	BANAL-20-103_Rhinolophus_pusillus_CoV
+	BANAL-20-116_Rhinolophus_malayanus_CoV
+	BANAL-20-236_Rhinolophus_marshalli_CoV
+	BANAL-20-247_Rhinolophus_pearsonii_CoV
+	BANAL-20-52_Rhinolophus_malayanus_CoV
+	EPI_ISL_1098866_Rhinolophus_sp_PrC31_China_2018
+	EPI_ISL_1699443_Rhinolophus_sinicus_RsYN03_China_2019
+	EPI_ISL_1699444_Rhinolophus_stheno_RsYN04_China_2020
+	EPI_ISL_1699445_Rhinolophus_malayanus_RmYN05_China_2020
+	EPI_ISL_1699446_Rhinolophus_pusillus_RpYN06_China_2020
+	EPI_ISL_1699447_Rhinolophus_malayanus_RmYN07_China_2020
+	EPI_ISL_1699448_Rhinolophus_malayanus_RmYN08_China_2020
+	EPI_ISL_1699449_Rhinolophus_stheno_RsYN09_China_2020
+	EPI_ISL_402131_Rhinolophus_affinis_RaTG13_China_2013
+	EPI_ISL_410538_Manis_javanica_Guangxi-P4L_China_2017
+	EPI_ISL_410539_Manis_javanica_Guangxi-P1E_China_2017
+	EPI_ISL_410540_Manis_javanica_Guangxi-P5L_China_2017
+	EPI_ISL_410541_Manis_javanica_Guangxi-P5E_China_2017
+	EPI_ISL_410542_Manis_javanica_Guangxi-P2V_China_2017
+	EPI_ISL_410721_Manis_javanica_Guangdong-1_China_2019
+	EPI_ISL_412977_Rhinolophus_malayanus_RmYN02_China_2019
+	EPI_ISL_471467_Manis_javanica_Guangdong-A22-2_China_2019
+	EPI_ISL_852604_Rhinolophus_shameli_RShSTT182_Cambodia_2010
+	EPI_ISL_852605_Rhinolophus_shameli_RShSTT200_Cambodia_2010
+	KY417145_Rhinolophus_ferrumequinum_Rf4092_China_2012
+	LC556375_Rhinolophus_cornutus_Rc-o319_Japan_2013
+	MG772933_Rhinolophus_pusillus_SL-CoVZC45_China_2017
+	MG772934_Rhinolophus_pusillus_SL-CoVZXC21_China_2015
+	MT121216_Manis_javanica_MP789_China_2019
+	MW251308_Rhinolophus_acuminatus_RacCS203_Thailand_2020
+	NC_045512_Human_Wuhan-Hu-1_China_2019
+;
+end;
+
+begin trees;
+	tree tree1 = [&R] ((EPI_ISL_1699445_Rhinolophus_malayanus_RmYN05_China_2020:1.0E-6,(EPI_ISL_1699444_Rhinolophus_stheno_RsYN04_China_2020:0.0,EPI_ISL_1699448_Rhinolophus_malayanus_RmYN08_China_2020:0.0)[&label="NODE_0000002"]:1.0E-6)[&label="NODE_0000001",mutations=""]:0.753153,((LC556375_Rhinolophus_cornutus_Rc-o319_Japan_2013[&mutations=""]:0.423766,((EPI_ISL_1699443_Rhinolophus_sinicus_RsYN03_China_2019[&mutations=""]:0.023196,KY417145_Rhinolophus_ferrumequinum_Rf4092_China_2012[&mutations=""]:0.024311)[&label="NODE_0000006",mutations=""]:0.053464,(EPI_ISL_1699447_Rhinolophus_malayanus_RmYN07_China_2020[&mutations=""]:0.061732,EPI_ISL_1699449_Rhinolophus_stheno_RsYN09_China_2020[&mutations="C3037T",!color=#cc3300]:0.018572)[&label="NODE_0000007",mutations=""]:0.071579)[&label="NODE_0000005",mutations=""]:0.439466)[&label="NODE_0000004",mutations=""]:0.07764,((EPI_ISL_410538_Manis_javanica_Guangxi-P4L_China_2017:1.0E-6,(EPI_ISL_410542_Manis_javanica_Guangxi-P2V_China_2017[&mutations=""]:1.0E-6,(EPI_ISL_410541_Manis_javanica_Guangxi-P5E_China_2017:1.0E-6,(EPI_ISL_410540_Manis_javanica_Guangxi-P5L_China_2017:0.0,EPI_ISL_410539_Manis_javanica_Guangxi-P1E_China_2017:0.0)[&label="NODE_0000012"]:1.0E-6)[&label="NODE_0000011"]:1.0E-6)[&label="NODE_0000010",mutations=""]:8.54E-4)[&label="NODE_0000009",mutations=""]:0.250307,((EPI_ISL_471467_Manis_javanica_Guangdong-A22-2_China_2019:1.0E-6,(EPI_ISL_410721_Manis_javanica_Guangdong-1_China_2019:0.0,MT121216_Manis_javanica_MP789_China_2019:0.0)[&label="NODE_0000015"]:1.0E-6)[&label="NODE_0000014",mutations=""]:0.105829,((MG772933_Rhinolophus_pusillus_SL-CoVZC45_China_2017[&mutations=""]:0.00631,MG772934_Rhinolophus_pusillus_SL-CoVZXC21_China_2015[&mutations="C3037T",!color=#cc3300]:0.02103)[&label="NODE_0000017",mutations=""]:0.110072,((EPI_ISL_852604_Rhinolophus_shameli_RShSTT182_Cambodia_2010:1.0E-6,EPI_ISL_852605_Rhinolophus_shameli_RShSTT200_Cambodia_2010:1.0E-6)[&label="NODE_0000019",mutations=""]:0.032508,(EPI_ISL_402131_Rhinolophus_affinis_RaTG13_China_2013[&mutations="",!color=#cc3300]:0.034619,(((BANAL-20-236_Rhinolophus_marshalli_CoV[&mutations="",!color=#cc3300]:0.009087,MW251308_Rhinolophus_acuminatus_RacCS203_Thailand_2020[&mutations="",!color=#cc3300]:0.037817)[&label="NODE_0000023",mutations="",!color=#cc3300]:0.021854,(EPI_ISL_1699446_Rhinolophus_pusillus_RpYN06_China_2020[&mutations="",!color=#cc3300]:0.010085,(BANAL-20-116_Rhinolophus_malayanus_CoV[&mutations="",!color=#cc3300]:8.34E-4,BANAL-20-247_Rhinolophus_pearsonii_CoV[&mutations="",!color=#cc3300]:8.44E-4)[&label="NODE_0000025",mutations="",!color=#cc3300]:0.008157)[&label="NODE_0000024",mutations="",!color=#cc3300]:0.008193)[&label="NODE_0000022",mutations="",!color=#cc3300]:0.00382,((EPI_ISL_1098866_Rhinolophus_sp_PrC31_China_2018[&mutations="",!color=#cc3300]:0.006164,EPI_ISL_412977_Rhinolophus_malayanus_RmYN02_China_2019[&mutations="",!color=#cc3300]:0.007419)[&label="NODE_0000027",mutations="",!color=#cc3300]:0.007722,(NC_045512_Human_Wuhan-Hu-1_China_2019[&mutations=""]:0.003955,(BANAL-20-52_Rhinolophus_malayanus_CoV[&mutations=""]:0.011261,BANAL-20-103_Rhinolophus_pusillus_CoV[&mutations=""]:0.002727)[&label="NODE_0000029",mutations="",!color=#000000]:0.003155)[&label="NODE_0000028",mutations="T3037C",!color=#000000]:0.017729)[&label="NODE_0000026",mutations="",!color=#cc3300]:0.011947)[&label="NODE_0000021",mutations="",!color=#cc3300]:0.006564)[&label="NODE_0000020",mutations="C3037T",!color=#cc3300]:0.00553)[&label="NODE_0000018",mutations=""]:0.049269)[&label="NODE_0000016",mutations=""]:0.037975)[&label="NODE_0000013",mutations=""]:0.166515)[&label="NODE_0000008",mutations=""]:0.125511)[&label="NODE_0000003"]:0.102737)[&label="NODE_0000000"];
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=2.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="mutations";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=10;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=true;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=12;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+
