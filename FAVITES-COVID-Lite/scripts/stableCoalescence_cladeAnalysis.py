@@ -324,9 +324,9 @@ if __name__ == "__main__":
     OUTPUT_coal = directory + '/coalData_parameterized.txt'
     OUTPUT_CC_polytomy_clade = directory + '/clade_analysis_CC_polytomy.txt'
     OUTPUT_linAB_polytomy_clade = directory + '/clade_analysis_AB_polytomy.txt'
-    OUTPUT_polytomy_clade = directory + '/clade_analysis_polytomy.txt'
     subtree.write_tree_newick(OUTPUT_subtree)
     # old results
+    OUTPUT_polytomy_clade = directory + '/clade_analysis_polytomy.txt'
     OUTPUT_CC_clade = directory + '/clade_analysis_CC.txt'
     OUTPUT_linAB_clade = directory + '/clade_analysis_AB.txt'
 
@@ -334,10 +334,6 @@ if __name__ == "__main__":
         f.write('time\tcoalescence time\ttotal infected\tcurrently infected\tcurrent samples\n')
         for index, i in enumerate(coal_timing[0]):
             f.write('%s\t%s\t%s\t%s\t%s\n' % (coal_timing[0][index], coal_timing[1][index], coal_timing[2][index], coal_timing[3][index], coal_timing[4][index]))
-
-    with open(OUTPUT_polytomy_clade, 'w') as f:
-        for clade in clades_polytomy:
-            f.write('%i\n' % clade)
 
     with open(OUTPUT_CC_polytomy_clade, 'w') as f:
         for clade in clades_polytomy_CC:
@@ -348,6 +344,10 @@ if __name__ == "__main__":
             f.write('%s %s\n' % (str(clade[0]), str(clade[1])))
 
     # old results
+    with open(OUTPUT_polytomy_clade, 'w') as f:
+        for clade in clades_polytomy:
+            f.write('%i\n' % clade)
+            
     with open(OUTPUT_CC_clade, 'w') as f:
         for clade in mutation_clade_sizes:
             f.write('%i\n' % clade)
