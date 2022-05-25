@@ -83,11 +83,7 @@ def coalescent_timing(time_inf_dict, current_inf_dict, total_inf_dict, tree, num
     total_inf = []
     current_inf = []
     current_samples = []
-    time_to_check = []
     current_labels = []
-
-    for i in range(0,num_days+1): # extra list to check days
-        time_to_check.append(i)
 
     current_time_index = 0
     for index, time in enumerate(times):
@@ -297,15 +293,18 @@ if __name__ == "__main__":
 
     # what are the sizes of 2-mutation clades who parents have no mutations?
     clades_2muts_0parentMuts = []
+    clades_2muts_0parentMuts_polytomy = []
     for n in subtree_sc.traverse_internal():
         if len(n.mutations) >= 2 and len(n.parent.mutations) == 0:
             # print(n.mutations, n.parent.mutations, n.clade_size, n.edge_length)
             clades_2muts_0parentMuts.append(n.clade_size)
+            clades_2muts_0parentMuts_polytomy.append([n.clade_size, sorted(get_mutation_clades(n, args.mutations, root_mutations=len(n.mutations), include_unmutated_leaves=True), reverse=True)])
     # print(clades_2muts_0parentMuts)
 
-    # How many basal taxa, unique tips, and clades are descendant from the stable coalescence? 
+    # How many basal taxa, unique tips, and clades are descendant a given node (stable coalescence, or for C/C)? 
     #    -> How many 0-mutation tips, 1-or-more-mutation tips, and 1-or-more-mutation internal nodes are there?
     clades_polytomy = []
+    clades_polytomy_CC = []
     for n in subtree_sc.traverse_rootdistorder():
         if n[1].is_root():
             continue
@@ -313,22 +312,42 @@ if __name__ == "__main__":
             continue 
         elif n[1].is_leaf():
             clades_polytomy.append(n[1].clade_size)
+            # clades_polytomy_CC.append([n[1].clade_size])
+            clades_polytomy_CC.append([n[1].clade_size, [n[1].clade_size]])
         elif not n[1].is_leaf() and len(n[1].mutations) > 0:
             clades_polytomy.append(n[1].clade_size)
+            clades_polytomy_CC.append([n[1].clade_size, sorted(get_mutation_clades(n[1], args.mutations, root_mutations=len(n[1].mutations), include_unmutated_leaves=True), reverse=True)])
+            # print(len(n[1].children))
 
     # write results
     OUTPUT_subtree = directory + '/stable_coalescence_subtree.newick'
     OUTPUT_coal = directory + '/coalData_parameterized.txt'
-    OUTPUT_CC_clade = directory + '/clade_analysis_CC.txt'
-    OUTPUT_linAB_clade = directory + '/clade_analysis_AB.txt'
+    OUTPUT_CC_polytomy_clade = directory + '/clade_analysis_CC_polytomy.txt'
+    OUTPUT_linAB_polytomy_clade = directory + '/clade_analysis_AB_polytomy.txt'
     OUTPUT_polytomy_clade = directory + '/clade_analysis_polytomy.txt'
     subtree.write_tree_newick(OUTPUT_subtree)
+    # old results
+    OUTPUT_CC_clade = directory + '/clade_analysis_CC.txt'
+    OUTPUT_linAB_clade = directory + '/clade_analysis_AB.txt'
 
     with open(OUTPUT_coal, 'w') as f:
         f.write('time\tcoalescence time\ttotal infected\tcurrently infected\tcurrent samples\n')
         for index, i in enumerate(coal_timing[0]):
             f.write('%s\t%s\t%s\t%s\t%s\n' % (coal_timing[0][index], coal_timing[1][index], coal_timing[2][index], coal_timing[3][index], coal_timing[4][index]))
 
+    with open(OUTPUT_polytomy_clade, 'w') as f:
+        for clade in clades_polytomy:
+            f.write('%i\n' % clade)
+
+    with open(OUTPUT_CC_polytomy_clade, 'w') as f:
+        for clade in clades_polytomy_CC:
+            f.write('%s %s\n' % (str(clade[0]), str(clade[1])))
+
+    with open(OUTPUT_linAB_polytomy_clade, 'w') as f:
+        for clade in clades_2muts_0parentMuts_polytomy:
+            f.write('%s %s\n' % (str(clade[0]), str(clade[1])))
+
+    # old results
     with open(OUTPUT_CC_clade, 'w') as f:
         for clade in mutation_clade_sizes:
             f.write('%i\n' % clade)
@@ -336,23 +355,4 @@ if __name__ == "__main__":
     with open(OUTPUT_linAB_clade, 'w') as f:
         for clade in clades_2muts_0parentMuts:
             f.write('%i\n' % clade)
-
-    with open(OUTPUT_polytomy_clade, 'w') as f:
-        for clade in clades_polytomy:
-            f.write('%i\n' % clade)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
