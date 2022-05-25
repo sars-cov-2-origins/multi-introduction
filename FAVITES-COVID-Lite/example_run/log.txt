@@ -1,0 +1,77 @@
+[2021-11-27 05:57:32] ===== RUN INFORMATION =====
+[2021-11-27 05:57:32] FAVITES-COVID-Lite Version: 0.0.1
+[2021-11-27 05:57:32] FAVITES-COVID-Lite Command: /home/kizhikev/scripts/FAVITES-COVID-Lite-updated.py --gzip_output --path_ngg_barabasi_albert ngg_barabasi_albert --path_gemf GEMF --path_coatran_constant coatran_constant --path_seqgen seq-gen --cn_n 5000000 --cn_m 8 --tn_s_to_e_seed 0 --tn_e_to_p1 125.862069 --tn_p1_to_p2 999999999 --tn_p2_to_i1 23.804348 --tn_p2_to_a1 134.891304 --tn_i1_to_i2 62.931034 --tn_i1_to_h 0.000000 --tn_i1_to_r 62.931034 --tn_i2_to_h 45.061728 --tn_i2_to_r 0.000000 --tn_a1_to_a2 9999999999 --tn_a2_to_r 125.862069 --tn_h_to_r 12.166667 --tn_s_to_e_by_e 0 --tn_s_to_e_by_p1 0 --tn_s_to_e_by_p2 3.513125 --tn_s_to_e_by_i1 6.387500 --tn_s_to_e_by_i2 6.387500 --tn_s_to_e_by_a1 0 --tn_s_to_e_by_a2 3.513125 --tn_freq_s 0.99999980 --tn_freq_e 0.00000020 --tn_freq_p1 0 --tn_freq_p2 0 --tn_freq_i1 0 --tn_freq_i2 0 --tn_freq_a1 0 --tn_freq_a2 0 --tn_freq_h 0 --tn_freq_r 0 --tn_end_time 0.273973 --tn_num_seeds 1 --pt_eff_pop_size 1 --pm_mut_rate 0.00092 --o ./0783
+[2021-11-27 05:57:32] Output Directory: ./0783
+[2021-11-27 05:57:32] 
+[2021-11-27 05:57:32] ===== CONTACT NETWORK =====
+[2021-11-27 05:57:32] Contact Network Model: Barabasi-Albert (BA)
+[2021-11-27 05:57:32] BA Parameter 'n': 5000000
+[2021-11-27 05:57:32] BA Parameter 'm': 8
+[2021-11-27 05:57:32] NiemaGraphGen Command: ngg_barabasi_albert 5000000 8
+[2021-11-27 06:01:16] Contact Network simulation complete: ./0783/contact_network.txt
+[2021-11-27 06:01:16] 
+[2021-11-27 06:01:16] ===== TRANSMISSION NETWORK =====
+[2021-11-27 06:01:16] Transmission Network Model: SAAPPHIIRE
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 's_to_e_seed': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'e_to_p1': 125.862069
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'p1_to_p2': 999999999.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'p2_to_i1': 23.804348
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'p2_to_a1': 134.891304
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'i1_to_i2': 62.931034
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'i1_to_h': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'i1_to_r': 62.931034
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'i2_to_h': 45.061728
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'i2_to_r': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'a1_to_a2': 9999999999.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'a2_to_r': 125.862069
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'h_to_r': 12.166667
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 's_to_e_by_e': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 's_to_e_by_p1': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 's_to_e_by_p2': 3.513125
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 's_to_e_by_i1': 6.3875
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 's_to_e_by_i2': 6.3875
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 's_to_e_by_a1': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 's_to_e_by_a2': 3.513125
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_s': 0.9999998
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_e': 2e-07
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_p1': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_p2': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_i1': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_i2': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_a1': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_a2': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_h': 0.0
+[2021-11-27 06:01:16] SAAPPHIIRE Parameter 'freq_r': 0.0
+[2021-11-27 06:01:16] Wrote GEMF 'para.txt' file: ./0783/GEMF_files/para.txt
+[2021-11-27 06:02:45] Wrote GEMF 'network.txt' file: ./0783/GEMF_files/network.txt
+[2021-11-27 06:02:48] Wrote GEMF 'status.txt' file: ./0783/GEMF_files/status.txt
+[2021-11-27 06:02:48] GEMF Command: GEMF
+[2021-11-27 06:07:54] Finished running GEMF
+[2021-11-27 06:08:00] Transmission Network simulation complete: ./0783/transmission_network.txt
+[2021-11-27 06:08:00] 
+[2021-11-27 06:08:00] ===== SAMPLE TIMES =====
+[2021-11-27 06:08:00] Sample Time Model: Fist Time Ascertained
+[2021-11-27 06:08:01] Sample time selection complete: ./0783/sample_times.txt
+[2021-11-27 06:08:01] 
+[2021-11-27 06:08:01] ===== PHYLOGENY =====
+[2021-11-27 06:08:01] Phylogenetic Model: Coalescent with Constant Effective Population Size
+[2021-11-27 06:08:01] Coalescent Parameter 'effective population size': 1.0
+[2021-11-27 06:08:01] CoaTran Command: coatran_constant ./0783/transmission_network.txt ./0783/sample_times.txt 1.0
+[2021-11-27 06:08:01] Phylogeny simulation complete: ./0783/tree.time.nwk
+[2021-11-27 06:08:01] 
+[2021-11-27 06:08:01] ===== MUTATION RATE =====
+[2021-11-27 06:08:01] Mutation Rate Model: Constant
+[2021-11-27 06:08:01] Mutation Rate: 0.00092
+[2021-11-27 06:08:01] Mutation rate scaling complete: ./0783/tree.mutations.nwk
+[2021-11-27 06:08:01] 
+[2021-11-27 06:08:01] ===== GZIP OUTPUT FILES =====
+[2021-11-27 06:11:57] Successfully compressed: ./0783/contact_network.txt
+[2021-11-27 06:11:58] Successfully compressed: ./0783/transmission_network.txt
+[2021-11-27 06:11:58] Successfully compressed: ./0783/sample_times.txt
+[2021-11-27 06:11:58] Successfully compressed: ./0783/tree.time.nwk
+[2021-11-27 06:11:58] Successfully compressed: ./0783/tree.mutations.nwk
+[2021-11-27 06:11:58] Successfully compressed: ./0783/GEMF_files/status.txt
+[2021-11-27 06:11:58] Successfully compressed: ./0783/GEMF_files/log.txt
+[2021-11-27 06:12:00] Successfully compressed: ./0783/GEMF_files/output.txt
+[2021-11-27 06:16:58] Successfully compressed: ./0783/GEMF_files/network.txt
+[2021-11-27 06:16:58] Successfully compressed: ./0783/GEMF_files/para.txt

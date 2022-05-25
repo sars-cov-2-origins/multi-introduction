@@ -1,0 +1,26 @@
+[2022-01-08 08:57:18] ===== RUN INFORMATION =====
+[2022-01-08 08:57:18] Output Directory: 0783
+[2022-01-08 08:57:18] 
+[2022-01-08 08:57:18] ===== TRANSMISSION SUBSAMPLING =====
+[2022-01-08 08:57:18] Output Directory: 0783
+[2022-01-08 08:57:18] 
+[2022-01-08 08:57:18] ===== SAMPLE TIMES =====
+[2022-01-08 08:57:18] Sample Time Model: First 50k
+[2022-01-08 08:57:19] Sample time selection complete: 0783/subsample_times.txt
+[2022-01-08 08:57:19] 
+[2022-01-08 08:57:19] ===== PHYLOGENY =====
+[2022-01-08 08:57:19] Phylogenetic Model: Coalescent with Constant Effective Population Size
+[2022-01-08 08:57:19] Coalescent Parameter 'effective population size': 1.0
+[2022-01-08 08:57:19] CoaTran Command: coatran_constant 0783/transmission_network.subsampled.txt 0783/subsample_times.txt 1.0
+[2022-01-08 08:57:19] Phylogeny simulation complete: 0783/tree.time.subsampled.nwk
+[2022-01-08 08:57:19] 
+[2022-01-08 08:57:19] ===== MUTATION RATE =====
+[2022-01-08 08:57:19] Mutation Rate Model: Constant
+[2022-01-08 08:57:19] Mutation Rate: 0.00092005
+[2022-01-08 08:57:19] Mutation rate scaling complete: 0783/tree.mutations.subsampled.nwk
+[2022-01-08 08:57:19] 
+[2022-01-08 08:57:19] ===== GZIP OUTPUT FILES =====
+[2022-01-08 08:57:19] Successfully compressed: 0783/transmission_network.subsampled.txt
+[2022-01-08 08:57:19] Successfully compressed: 0783/subsample_times.txt
+[2022-01-08 08:57:19] Successfully compressed: 0783/tree.time.subsampled.nwk
+[2022-01-08 08:57:19] Successfully compressed: 0783/tree.mutations.subsampled.nwk
