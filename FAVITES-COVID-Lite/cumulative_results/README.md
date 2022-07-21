@@ -1,1 +1,1 @@
-These are the results for the primary analysis described in the Main Text. 
+These are the pooled outputs and results for the primary simulations, as described in the Main Text. 
